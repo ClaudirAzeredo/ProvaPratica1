@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#3F51B5"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -42,7 +43,7 @@
                 android:id="@+id/btn1"
                 android:layout_width="192dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#4CAF50"
+                android:backgroundTint="#51C856"
                 android:text="Crédito"
                 android:textColor="@color/black" />
 
@@ -69,5 +70,26 @@
             android:ems="10"
             android:inputType="number" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="365dp"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Total"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#2196F3"
+                android:backgroundTint="#2196F3"
+                android:gravity="center"
+                android:text="Total:" />
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+crie um aplicativo que selecione o tipo de transação credito ou debito, insira o valor da transação
