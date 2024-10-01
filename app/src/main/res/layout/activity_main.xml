@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:backgroundTint="#3F51B5"
     tools:context=".MainActivity">
 
@@ -12,17 +12,17 @@
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="1dp">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/Descri"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Descrição da Transação:" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/DescriUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -48,7 +48,7 @@
                 android:textColor="@color/black" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn2"
                 android:layout_width="217dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -58,13 +58,13 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/InformVal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Informe o valor:" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/Val"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -73,7 +73,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="365dp"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#3F51B5"
+                    android:gravity="center"
+                    android:text="Adicionar" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/Lis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,8 +109,16 @@
                 android:backgroundTint="#2196F3"
                 android:gravity="center"
                 android:text="Total:" />
+
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#3F51B5"
+            android:text="Limpar" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
-crie um aplicativo que selecione o tipo de transação credito ou debito, insira o valor da transação
